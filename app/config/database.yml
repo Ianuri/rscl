@@ -1,0 +1,25 @@
+
+default: &default
+  adapter: sqlserver
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  #database: db/development.sqlserver
+  dsn: Driver={SQL Server Native Client 11.0};Server=jmaftf54i1.database.windows.net,1433;Database=Planilla;Uid=TCS;Pwd=AdminSis17;
+  mode: odbc
+  azure: true
+
+
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test.sqlserver
+
+production:
+  <<: *default
+  database: db/production.sqlserver

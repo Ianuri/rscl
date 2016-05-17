@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idTrabajador: MyString
+  apellidos: MyString
+  nombres: MyString
+  direccion: MyString
+  idAfp: MyString
+  Basico: MyString
+
+two:
+  idTrabajador: MyString
+  apellidos: MyString
+  nombres: MyString
+  direccion: MyString
+  idAfp: MyString
+  Basico: MyString

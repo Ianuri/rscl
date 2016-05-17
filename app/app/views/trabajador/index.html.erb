@@ -1,0 +1,58 @@
+
+
+
+      <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Lista de empleados
+                    <small>.</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+      
+      <!-- Content Row -->
+        <div class="row">
+
+            <p id="notice"><%= notice %></p>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Cód.</th>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Dirección</th>
+                  <th>Afp</th>
+                  <th>Básico</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <% @trabajadores.each do |trabajador| %>
+                  <tr>
+                    <td><%= trabajador.idTrabajador %></td>
+                    <td><%= trabajador.Nombres %></td>
+                    <td><%= trabajador.Apellidos %></td>
+                    <td><%= trabajador.Direccion %></td>
+                    <td><%= trabajador.idAfp %></td>
+                    <td><%= trabajador.Basico %></td>
+                    <td><%# link_to image_tag('consulta.png', height: '20', width: '25'), trabajador %></td>
+                    <td><%# link_to image_tag('edit.png', height: '20', width: '20'), edit_trabajador_path(trabajador) %></td>
+                    <td><%# link_to image_tag('delete.png', height: '20', width: '20'), trabajador, method: :delete, data: { confirm: '¿Está seguro que desea eliminar este registro?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+
+            <br>
+      
+        </div>
+      <!-- /.row -->
+
+
+
+
+
